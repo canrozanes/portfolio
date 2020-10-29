@@ -7,10 +7,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const cmsError = pageProps.error;
   return (
     <CmsProvider isEditing={isEditing} error={cmsError}>
-      <>
-        <EditLink />
-        <Component {...pageProps} />
-      </>
+      <EditLink />
+      <Component {...pageProps} />
     </CmsProvider>
   );
 }

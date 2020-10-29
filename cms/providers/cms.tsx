@@ -11,10 +11,10 @@ import { GithubToolbarProvider } from "./github";
 export interface CmsProviderProps {
   isEditing: boolean;
   error: Error;
-  children: React.ReactElement;
+  children: React.ReactChild | React.ReactChild[];
 }
 
-export function CmsProvider({ isEditing, error, children }: CmsProviderProps) {
+function CmsProvider({ isEditing, error, children }: CmsProviderProps) {
   const memoizedCms = useMemo(() => {
     const github = new GithubClient({
       proxy: "/api/proxy-github",
@@ -42,11 +42,8 @@ export function CmsProvider({ isEditing, error, children }: CmsProviderProps) {
       toolbar: isEditing,
     });
 
-    cms.registerApi("github", github);
-
     return cms;
   }, []);
-  console.log(memoizedCms);
   return (
     <TinaProvider cms={memoizedCms}>
       <TinacmsGithubProvider

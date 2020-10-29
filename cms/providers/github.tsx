@@ -1,7 +1,7 @@
 import { useGithubToolbarPlugins } from "react-tinacms-github";
 
 export interface GithubToolbarProviderProps {
-  children: React.ReactElement;
+  children: React.ReactChild | React.ReactChild[];
 }
 
 export function GithubToolbarProvider({
@@ -9,5 +9,5 @@ export function GithubToolbarProvider({
 }: GithubToolbarProviderProps) {
   useGithubToolbarPlugins();
 
-  return children;
+  return <>{children}</>;
 }
