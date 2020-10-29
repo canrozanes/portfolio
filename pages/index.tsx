@@ -1,7 +1,10 @@
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import styles from "../styles/Home.module.css";
 
-export default function Home() {
+export default function Home({ file }) {
+  const data = file.data;
   return (
     <div className={styles.container}>
       <Head>
@@ -10,9 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>{data.title}</h1>
 
         <p className={styles.description}>
           Get started by editing{" "}
@@ -63,3 +64,28 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps = async function ({
+  preview,
+  previewData,
+}) {
+  if (preview) {
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: "content/home.json",
+      parse: parseJson,
+    });
+  }
+  const data = await import("../content/home.json");
+  return {
+    props: {
+      sourceProvider: null,
+      error: null,
+      preview: false,
+      file: {
+        fileRelativePath: "content/home.json",
+        data: data.default,
+      },
+    },
+  };
+};

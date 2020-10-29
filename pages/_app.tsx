@@ -94,7 +94,6 @@ export interface EditLinkProps {
 
 export const EditLink = () => {
   const cms = useCMS();
-  console.log(cms);
   return (
     <button onClick={() => cms.toggle()}>
       {cms.enabled ? "Exit Edit Mode" : "Edit This Site"}
