@@ -22,6 +22,7 @@ function CmsProvider({ isEditing, error, children }: CmsProviderProps) {
       clientId: process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID,
       baseRepoFullName: process.env.NEXT_PUBLIC_REPO_FULL_NAME,
       baseBranch: process.env.NEXT_PUBLIC_BASE_BRANCH,
+      authScope: "repo",
     });
     const cms = new TinaCMS({
       enabled: isEditing,

@@ -1,11 +1,17 @@
 import { useCMS } from "tinacms";
+import Button from "@material-ui/core/Button";
 
 const EditLink = () => {
   const cms = useCMS();
   return (
-    <button onClick={() => cms.toggle()}>
+    <Button
+      onClick={() => cms.toggle()}
+      size="small"
+      variant="outlined"
+      color="inherit"
+    >
       {cms.enabled ? "Exit Edit Mode" : "Edit This Site"}
-    </button>
+    </Button>
   );
 };
 
