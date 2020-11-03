@@ -1,8 +1,8 @@
-const myomers = require("./projects/project1").default;
-const whoWantsToBeADeveloper = require("./projects/project4").default;
-const mastermind = require("./projects/project5").default;
-const urlTrimShop = require("./projects/urlTrimShop").default;
-const telus = require("./projects/teluscom").default;
+import myomers from "./myomers/summary.json";
+import telus from "./teluscom/summary.json";
+import urlTrimShop from "./urlTrimShop/summary.json";
+import mastermind from "./mastermind/summary.json";
+import whoWantsToBeADeveloper from "./who-wants-to-be-a-dev/summary.json";
 
 const getProjects = () => [
   telus,

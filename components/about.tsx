@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { styled } from "@material-ui/core/styles";
 import SkillsChip from "./skills-chip";
 import Section from "../components/section";
+import ReactMarkdown from "react-markdown";
 
 const SkillsContainer = styled("ul")(({ theme }) => ({
   listStyleType: "none",
@@ -21,7 +22,7 @@ const SkillsItem = styled("li")(({ theme }) => ({
   marginTop: 0,
 }));
 
-const About = () => {
+const About = ({ about }) => {
   const languages = ["JavaScript", "TypeScript", "Node.js", "Golang", "Python"];
   const FrameworksLibraries = [
     "React.js",
@@ -47,18 +48,8 @@ const About = () => {
         </Typography>
         <Grid container>
           <Grid item xs={12} md={6}>
-            <Typography paragraph>
-              I am a Full Stack Developer based in Toronto with a background in
-              electrical engineering.
-            </Typography>
-            <Typography paragraph>
-              With proven leadership and communication skills, I am passionate
-              about using creativity and best practices to tackle complex
-              challenges and working effectively in a team. Whether I am
-              creating a web application or building automation tools to make
-              businesses run efficiently, I want everything I build to be
-              scalable, maintainable and have a positive impact on the lives of
-              everyday users.
+            <Typography>
+              <ReactMarkdown>{about.summary}</ReactMarkdown>
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -69,11 +60,11 @@ const About = () => {
               <Typography variant="body1">
                 I've worked with the following languages in the past:
               </Typography>
-              <SkillsChip skills={languages} />
+              <SkillsChip skills={about.skills.languages} />
               <Typography variant="body1">Frameworks and Libraries</Typography>
-              <SkillsChip skills={FrameworksLibraries} />
+              <SkillsChip skills={about.skills.frameworks} />
               <Typography variant="body1">Methods/Standards/Tools</Typography>
-              <SkillsChip skills={etc} />
+              <SkillsChip skills={about.skills.methods} />
             </Box>
           </Grid>
         </Grid>

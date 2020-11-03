@@ -1,6 +1,6 @@
 import Head from "next/head";
 import ProjectPage from "../../components/project-page";
-import { getAllSlugs, getProjectBySlug } from "../../content";
+import { getAllSlugs, getProjectBySlug } from "../../content/projects";
 
 const Project = ({ project }) => (
   <>

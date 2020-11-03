@@ -1,0 +1,13 @@
+{
+  "languages": ["JavaScript", "TypeScript", "Node.js", "Golang", "Python"],
+  "frameworks": [
+    "React.js",
+    "Next.js",
+    "Redux.js",
+    "Express.js",
+    "Jest",
+    "Testing Library",
+    "Node.js"
+  ],
+  "methods": ["Git/Git Flow", "Test Driven Development", "WCAG 2.0", "MongoDB"]
+}
