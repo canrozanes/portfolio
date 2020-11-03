@@ -3,7 +3,12 @@ import Typography from "@material-ui/core/Typography";
 import ProjectCard from "./project-card";
 import Section from "../components/section";
 
-const Projects = ({ projects, isOwnPage }) => (
+interface ProjectsProps {
+  projects: any;
+  isOwnPage?: boolean;
+}
+
+const Projects = ({ projects, isOwnPage }: ProjectsProps) => (
   <Section>
     <Container maxWidth="lg">
       {isOwnPage ? (
