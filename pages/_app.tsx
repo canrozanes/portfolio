@@ -1,21 +1,17 @@
 import { AppProps } from "next/app";
-import CmsProvider from "../cms/providers/cms";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../styles/theme";
 import Layout from "../layouts";
+import "../styles/styles.css";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  const isEditing = pageProps.isEditing ?? pageProps.preview ?? false;
-  const cmsError = pageProps.error;
+function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <CmsProvider isEditing={isEditing} error={cmsError}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </CmsProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
 
-export default MyApp;
+export default App;

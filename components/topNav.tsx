@@ -29,7 +29,7 @@ const TopNav = () => (
         </StyledLink>
       </ListItem>
       <ListItem>
-        <StyledLink color="textPrimary" href="#about" underline="hover">
+        <StyledLink color="textPrimary" href="/#about" underline="hover">
           About
         </StyledLink>
       </ListItem>

@@ -13,59 +13,61 @@ const StyledContainer = styled(Container)(({ theme }) => ({
 
 const Hero = () => (
   <StyledContainer maxWidth="lg">
-    <Box fontWeight={500}>
-      <Typography variant="h5" paragraph>
-        Hi, I’m Can!{" "}
-        <span role="img" aria-label="emoji of waving hand">
-          👋
-        </span>{" "}
-        (Pronounced John)
+    <Box mx={{ xs: 1, md: 2 }}>
+      <Box fontWeight={500}>
+        <Typography variant="h5" paragraph>
+          Hi, I’m Can!{" "}
+          <span role="img" aria-label="emoji of waving hand">
+            👋
+          </span>{" "}
+          (Pronounced John)
+        </Typography>
+      </Box>
+      <Typography variant="h1" component="h1" paragraph>
+        I’m a Full-Stack Developer.
+      </Typography>
+      <Typography paragraph variant="h5">
+        I build accessible, maintainable, and user-friendly applications.
+      </Typography>
+      <Typography paragraph>
+        To get in touch, you can{" "}
+        <Link href="mailto:canrozanes@gmail.com" aria-label="Send me an email">
+          email
+        </Link>
+        {" me or find me on "}
+        <Link
+          href="mailto:canrozanes@gmail.com"
+          aria-label="Go to my Linkedin Profile"
+        >
+          Linkedin
+        </Link>
+        {", "}
+        <Link
+          href="https://github.com/canrozanes/"
+          aria-label="Go to my Github Profile"
+        >
+          Github
+        </Link>{" "}
+        or{" "}
+        <Link
+          href="https://twitter.com/canrozanes"
+          aria-label="Go to my Twitter Profile"
+        >
+          Twitter
+        </Link>
+        .
+      </Typography>
+      <Typography>
+        Also,{" "}
+        <Link
+          href="https://resume.creddle.io/resume/exze526vanl"
+          aria-label="Go to my resume on creddle.io"
+        >
+          here
+        </Link>{" "}
+        is my resume.
       </Typography>
     </Box>
-    <Typography variant="h1" component="h1" paragraph>
-      I’m a Full-Stack Developer.
-    </Typography>
-    <Typography paragraph variant="h5">
-      I build accessible, maintainable, and user-friendly applications.
-    </Typography>
-    <Typography paragraph>
-      To get in touch, you can{" "}
-      <Link href="mailto:canrozanes@gmail.com" aria-label="Send me an email">
-        email
-      </Link>
-      {" me or find me on "}
-      <Link
-        href="mailto:canrozanes@gmail.com"
-        aria-label="Go to my Linkedin Profile"
-      >
-        Linkedin
-      </Link>
-      {", "}
-      <Link
-        href="https://github.com/canrozanes/"
-        aria-label="Go to my Github Profile"
-      >
-        Github
-      </Link>{" "}
-      or{" "}
-      <Link
-        href="https://twitter.com/canrozanes"
-        aria-label="Go to my Twitter Profile"
-      >
-        Twitter
-      </Link>
-      .
-    </Typography>
-    <Typography>
-      Also,{" "}
-      <Link
-        href="https://resume.creddle.io/resume/exze526vanl"
-        aria-label="Go to my resume on creddle.io"
-      >
-        here
-      </Link>{" "}
-      is my resume.
-    </Typography>
   </StyledContainer>
 );
 

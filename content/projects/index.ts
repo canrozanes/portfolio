@@ -1,10 +1,26 @@
-import myomers from "./myomers/summary.json";
-import telus from "./teluscom/summary.json";
-import urlTrimShop from "./urlTrimShop/summary.json";
-import mastermind from "./mastermind/summary.json";
-import whoWantsToBeADeveloper from "./who-wants-to-be-a-dev/summary.json";
+import myomers from "./myomers";
+import telus from "./teluscom";
+import urlTrimShop from "./urlTrimShop";
+import mastermind from "./mastermind";
+import whoWantsToBeADeveloper from "./who-wants-to-be-a-dev";
 
-const getProjects = () => [
+export interface Project {
+  title: string;
+  slug: string;
+  skills: string[];
+  summary: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  links: {
+    href: string;
+    text: string;
+  }[];
+  body: string;
+}
+
+const getProjects = (): Project[] => [
   telus,
   myomers,
   urlTrimShop,

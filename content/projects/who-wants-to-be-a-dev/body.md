@@ -1,1 +1,3 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Motivation
+
+This is a fun little project I built with (Eugene Michasiw)[https://michasiw.com/] in the span of few days. The app consumes an external api (Open Trivia DB)[https://opentdb.com/api_config.php] and serves 15 Computer Science related questions in the format of "Who Wants to Be a Developer".

@@ -24,30 +24,29 @@ const StyledGrid = styled(Grid)({
   marginTop: "20px",
 });
 
+const StyledImage = styled(Image)({
+  borderRadius: "4px",
+  boxShadow:
+    "0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)",
+});
+
 const ProjectCard = ({ project }: ProjectCardProps) => (
   <Box my={{ xs: 2, md: 4 }}>
     <StyledGrid container>
       <Grid item xs={12} md={4}>
-        <Card>
-          <Image
-            src={project.image.src}
-            alt={project.image.alt}
-            width={456}
-            height={256}
-          />
-        </Card>
+        <StyledImage
+          src={project.image.src}
+          alt={project.image.alt}
+          width={456}
+          height={256}
+        />
       </Grid>
       <Grid item xs={12} md={8}>
         <Box ml={{ xs: 0, md: 5 }}>
           <Typography gutterBottom variant="h4" component="h3" paragraph>
             {project.title}
           </Typography>
-          <Typography
-            variant="body2"
-            color="textPrimary"
-            component="p"
-            paragraph
-          >
+          <Typography color="textPrimary" component="p" paragraph>
             {project.summary}
           </Typography>
           <SkillsChip skills={project.skills} />

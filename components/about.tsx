@@ -5,7 +5,8 @@ import Grid from "@material-ui/core/Grid";
 import { styled } from "@material-ui/core/styles";
 import SkillsChip from "./skills-chip";
 import Section from "../components/section";
-import ReactMarkdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
+import { AboutData } from "../content/home/about";
 
 const SkillsContainer = styled("ul")(({ theme }) => ({
   listStyleType: "none",
@@ -22,23 +23,13 @@ const SkillsItem = styled("li")(({ theme }) => ({
   marginTop: 0,
 }));
 
-const About = ({ about }) => {
-  const languages = ["JavaScript", "TypeScript", "Node.js", "Golang", "Python"];
-  const FrameworksLibraries = [
-    "React.js",
-    "Next.js",
-    "Redux.js",
-    "Express.js",
-    "Jest",
-    "Testing Library",
-    "Node.js",
-  ];
-  const etc = [
-    "Git/Git Flow",
-    "Test Driven Development",
-    "WCAG 2.0",
-    "MongoDB",
-  ];
+interface AboutProps {
+  data: AboutData;
+}
+
+const About = ({ data }: AboutProps) => {
+  const aboutSummaryData = data.summary;
+  const aboutSkillsData = data.skills;
 
   return (
     <Section id="about">
@@ -48,23 +39,33 @@ const About = ({ about }) => {
         </Typography>
         <Grid container>
           <Grid item xs={12} md={6}>
-            <Typography>
-              <ReactMarkdown>{about.summary}</ReactMarkdown>
-            </Typography>
+            <Markdown
+              options={{
+                overrides: {
+                  p: {
+                    component: Typography,
+                    props: {
+                      paragraph: true,
+                      variant: "body1",
+                    },
+                  },
+                },
+              }}
+            >
+              {aboutSummaryData}
+            </Markdown>
           </Grid>
           <Grid item xs={12} md={6}>
             <Box ml={{ xs: 0, md: 5 }}>
               <Typography variant="h5" component="h3">
                 Technical Skills:
               </Typography>
-              <Typography variant="body1">
-                I've worked with the following languages in the past:
-              </Typography>
-              <SkillsChip skills={about.skills.languages} />
+              <Typography variant="body1">Programming Languages:</Typography>
+              <SkillsChip skills={aboutSkillsData.languages} />
               <Typography variant="body1">Frameworks and Libraries</Typography>
-              <SkillsChip skills={about.skills.frameworks} />
+              <SkillsChip skills={aboutSkillsData.frameworks} />
               <Typography variant="body1">Methods/Standards/Tools</Typography>
-              <SkillsChip skills={about.skills.methods} />
+              <SkillsChip skills={aboutSkillsData.methods} />
             </Box>
           </Grid>
         </Grid>
