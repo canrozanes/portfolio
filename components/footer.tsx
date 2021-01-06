@@ -21,15 +21,7 @@ const Footer = () => (
     <Toolbar>
       <Container>
         <Typography variant="body1">
-          Built by Can Rozanes with{" "}
-          <Link
-            href="https://nextjs.org/"
-            color="textSecondary"
-            underline="always"
-          >
-            Next.js
-          </Link>{" "}
-          and . Copyright &#169; 2021
+          Built by Can Rozanes in Toronto. Copyright &#169; 2021
         </Typography>
       </Container>
     </Toolbar>
