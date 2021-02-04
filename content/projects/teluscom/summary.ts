@@ -1,5 +1,5 @@
 export const summary = {
-  title: "Telus Site Builder",
+  title: "TELUS Site Builder",
   slug: "telus",
   skills: ["React", "NodeJS", "Contentful", "Redux", "Enzyme", "Jest"],
   summary:
