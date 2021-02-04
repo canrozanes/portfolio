@@ -9,5 +9,5 @@
     "Testing Library",
     "Node.js"
   ],
-  "methods": ["Git/Git Flow", "Test Driven Development", "WCAG 2.0", "MongoDB"]
+  "methods": ["Git/Git Flow", "Test Driven Development", "WCAG 2.0", "MongoDB", "Prisma"]
 }
