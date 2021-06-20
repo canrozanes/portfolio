@@ -31,9 +31,9 @@ const Layout = ({ children }: LayoutProps) => (
     </Head>
     <CssBaseline />
     <StyledDiv>
-      <Header />
+      {/* <Header /> */}
       <StyledMain>{children}</StyledMain>
-      <Footer />
+      {/* <Footer /> */}
     </StyledDiv>
   </>
 );

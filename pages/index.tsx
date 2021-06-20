@@ -13,8 +13,8 @@ export default function Home({ projects, about }) {
         <title>Home | Can Rozanes</title>
       </Head>
       <Hero />
-      <About data={about} />
-      <Projects projects={projects} />
+      {/* <About data={about} />
+      <Projects projects={projects} /> */}
     </>
   );
 }
