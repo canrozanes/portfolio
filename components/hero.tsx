@@ -36,7 +36,7 @@ const Hero = () => (
         </Link>
         {" me or find me on "}
         <Link
-          href="mailto:canrozanes@gmail.com"
+          href="https://www.linkedin.com/in/canrozanes/"
           aria-label="Go to my Linkedin Profile"
         >
           Linkedin
