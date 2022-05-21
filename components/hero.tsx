@@ -36,22 +36,22 @@ const Hero = () => (
         </Link>
         {" me or find me on "}
         <Link
-          href="mailto:canrozanes@gmail.com"
-          aria-label="Go to my Linkedin Profile"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          aria-label="This is a Rick roll"
         >
           Linkedin
         </Link>
         {", "}
         <Link
-          href="https://github.com/canrozanes/"
-          aria-label="Go to my Github Profile"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          aria-label="This is a Rick roll"
         >
           Github
         </Link>{" "}
         or{" "}
         <Link
-          href="https://twitter.com/canrozanes"
-          aria-label="Go to my Twitter Profile"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          aria-label="This is a Rick roll"
         >
           Twitter
         </Link>
@@ -60,8 +60,8 @@ const Hero = () => (
       <Typography>
         Also,{" "}
         <Link
-          href="https://resume.creddle.io/resume/exze526vanl"
-          aria-label="Go to my resume on creddle.io"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          aria-label="This is a Rick roll"
         >
           here
         </Link>{" "}
